@@ -1,5 +1,5 @@
 # Installation
-Labrea Test is available for install via pip.
+`labrea-test` is available for install via pip.
 
 ```bash
 pip install labrea-test

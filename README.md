@@ -9,7 +9,7 @@ Utilities for testing code written with [labrea](https://github.com/8451/labrea)
 [![docs](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://8451.github.io/labrea-test)
 
 ## Installation
-Labrea is available for install via pip.
+`labrea-test` is available for install via pip.
 
 ```bash
 pip install labrea-test
