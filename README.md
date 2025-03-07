@@ -3,7 +3,7 @@ Utilities for testing code written with [labrea](https://github.com/8451/labrea)
 
 ![](https://img.shields.io/badge/version-0.0.1-blue.svg)
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://www.tidyverse.org/lifecycle/#stable)
-[![PyPI Downloads](https://img.shields.io/pypi/dm/labrea.svg?label=PyPI%20downloads)](https://pypi.org/project/labrea-test/)
+[![PyPI Downloads](https://img.shields.io/pypi/dm/labrea-test.svg?label=PyPI%20downloads)](https://pypi.org/project/labrea-test/)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Coverage](https://raw.githubusercontent.com/8451/labrea-test/meta/coverage/coverage.svg)](https://github.com/8451/labrea-test/tree/meta/coverage)
 [![docs](https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat)](https://8451.github.io/labrea-test)
