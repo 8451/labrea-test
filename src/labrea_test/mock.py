@@ -67,20 +67,28 @@ class Mock:
     During testing, it is often useful to mock a dataset or other Evaluatable to isolate the code
     being tested. This can be accomplished with overloads, but it can be cumbersome to set up and
     tear down the overloads. The Mock context manager simplifies this process by allowing you to
-    provide a value (or other evaluatable) to use in place of the original evaluatable.
+    provide a value (or other Evaluatable) to use in place of the original evaluatable.
 
 
     Example Usage
     -------------
     >>> from labrea import dataset
-    >>> import labrea.mock
+    >>> import labrea_test
     >>>
     >>> @dataset
     >>> def foo() -> str:
-    ...    return "foo"
+    ...     return "foo"
     ...
-    >>> with labrea.mock.Mock() as mock:
+    >>> with labrea_test.Mock() as mock:
     ...     mock(foo, "bar")
+    ...     assert foo() == "bar"
+    ...
+    >>> @dataset
+    >>> def bar() -> str:
+    ...     return "bar"
+    ...
+    >>> with labrea_test.Mock() as mock:
+    ...     mock(foo, bar)
     ...     assert foo() == "bar"
     ...
     >>> assert foo() == "foo"
