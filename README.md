@@ -49,15 +49,6 @@ def test_foo():
 `Evaluatable` object as the value to mock to.
 
 ```python
-import labrea_test
-from labrea import dataset
-
-
-@dataset
-def foo() -> str:
-    return "foo"
-
-
 @dataset
 def bar() -> str:
     return "bar"
