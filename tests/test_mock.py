@@ -1,3 +1,4 @@
+import pytest
 import labrea_test
 from labrea import Option
 
@@ -22,3 +23,18 @@ def test_mock():
     A.validate({"A": 1})
     assert A.keys({"A": 1}) == {"A"}
     assert A.explain() == {"A"}
+
+
+def test_double_enter():
+    with pytest.raises(RuntimeError):
+        with labrea_test.Mock() as mock:
+            with mock:
+                pass
+
+
+def test_double_exit():
+    with pytest.raises(RuntimeError):
+        with labrea_test.Mock() as mock:
+            pass
+
+        mock.__exit__(None, None, None)
