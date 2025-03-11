@@ -44,8 +44,8 @@ jobs:
           git add -f coverage.svg coverage.xml
           git commit -m $"Update coverage `date -u`"
           git fetch origin meta/coverage
-          git checkout -b meta/coverage || git checkout meta/coverage
+          git checkout meta/coverage
           git pull
           git checkout main coverage.svg coverage.xml
           git commit -m $"Update coverage `date -u`"
-          git push -u origin meta/coverage
+          git push origin meta/coverage
