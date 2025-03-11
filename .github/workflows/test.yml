@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: ${{ matrix.python-version }}https://github.com/8451/labrea-test/settings/access
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -34,7 +34,7 @@ jobs:
           flake8 src --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
-          pytest --cov=labrea-test --cov-report=xml
+          pytest --cov=labrea_test --cov-report=xml
       - name: Update coverage badge
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && matrix.python-version == '3.9'}}
         run: |
